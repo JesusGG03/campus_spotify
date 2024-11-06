@@ -383,7 +383,7 @@ function displayUserGenreChart(genreData) {
 }
 
 
-function displayUserGenreChart(genreData) {
+function displayUniGenreChart(genreData) {
     const ctx = document.getElementById('genre-pie-chart').getContext('2d');
 
     const labels = Object.keys(genreData).length ? Object.keys(genreData) : ["Others"];
