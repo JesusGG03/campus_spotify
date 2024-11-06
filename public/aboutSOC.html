@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Spotify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/SOC_revosed_logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <img src="images/SOC_revosed_logo.png" alt="SOC logo" class="logo">
+        <button class="nav-toggle">☰</button>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutSOC.html">About SOC</a></li>
+                <li><a href="meetMe.html">Meet Me</a></li>
+                <li><a href="disclaimer.html">Disclaimers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="title-div">
+            <h1>About Sound of Charlotte</h1>
+            
+        </div>
+
+        <div class="aboutSOC fade-in">
+            <h4>Overview</h4>
+            <p><i>Sound of Charlotte</i> is a personal project that has been developed over
+                the course of 3 weeks. The original concept of SOC was a basic, terminal-based,
+                python project. However, as I kept working on it, I became more ambitious and wanted to deploy 
+                my own web app.
+            </p>
+            <br>
+            <h4>How It Works</h4>
+            <p><i>Sound of Charlotte</i> works with the Spotify API. This API is what allows
+            you to login and grant permission for this website to access your top tracks, artists, and genres.
+            Additionally, none of your sensitive data is logged or stored. The only information that is stored
+            is your top items, which also are stored with no connection to you. Lastly, <i>Sound of Charlotte</i>
+            stores all the tracks, artists, and genres in a database with a count that accumulates of a song already
+            exists in the database.
+            </p>
+
+            <br>
+
+            <p>p.s. The button to switch tracks, artists, and genres stops working
+                after multiple clicks. This is a bug I encountered during my last 
+                day of developing. I'm trying my hardest to find a solution. Thank you 
+                for your patience!
+            </p>
+
+            <img src="images/Double_thumbs_up.png" alt="Double Thumbs Up Emoji">
+        </div>
+
+    </main>
+    
+    <script type="module" src="scripts/aboutSOCScript.js"></script>
+</body>
+
+</html>

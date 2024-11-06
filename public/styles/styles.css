@@ -1,0 +1,517 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    
+    
+}
+
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    min-height: 100vh;
+    
+    background-color: #0c3b2e;
+    color: white;
+    
+    display: grid;
+    grid-template-rows: 10vh auto 10vh;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+}
+
+
+main{
+    grid-area: main;
+}
+
+
+/* Title div */
+
+.title-div {
+    margin-top: 20px;
+ 
+    text-align: center;
+}
+
+
+
+/* Submit Button */
+#login-btn {
+    display: block;
+    background-color: white ;
+    color: black;
+    font-size: 1.25rem; 
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+
+
+/* user_tracks Page */
+
+.user-top-song-container img{
+    height: 10vh;
+    width: auto;
+    
+}
+
+.user-top-song-container h2{
+
+    min-width: 24px;
+}
+
+.pie-chart-container img{
+    height: 10vh;
+    width: auto;
+}
+
+.user-song-container h1{
+    text-align: center;
+}
+
+.user-song-container{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: white;
+    color: black;
+    padding: 1rem 1rem;
+    margin: 2rem;
+    border-radius: 20px;
+}
+
+.user-top-song-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    
+}
+
+.user-top-song-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    flex-grow: 1;
+
+}
+
+.user-top-five-song-container img{
+    height: 10vh;
+    width: auto;
+}
+
+.user-top-five-song-container h2{
+    min-width: 24px;
+}
+
+.user-top-five-songs-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+
+.user-top-five-song-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-grow: 1;
+    min-width: 167px;
+}
+
+.user-top-five-song-info{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    align-items: start;
+}
+
+.flipTrackDataBtn{
+    height: 3vh;
+    width: 3vh;
+    align-items: end;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.flipTrackDataImg{
+    height: 100%;
+}
+
+
+
+
+.user-top-artist-container img{
+    width: 10vh;
+    height: auto;
+}
+
+.user-artist-container h1{
+    text-align: center;
+}
+
+.user-artist-container{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: white;
+    color: black;
+    padding: 1rem 1rem;
+    margin: 2rem;
+    border-radius: 20px;
+}
+
+.user-top-artist-container h2{
+    min-width: 24px;
+}
+
+.user-top-artist-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    
+}
+
+.user-top-artist-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    flex-grow: 1;
+
+}
+
+.user-top-five-artists-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.user-top-five-artist-row{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+.user-top-five-artist-container h2{
+    min-width: 24px;
+}
+
+.user-top-five-artist-container img{
+    width: 10vh;
+    height: auto;
+}
+
+.user-top-five-artist-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-grow: 1;
+    min-width: 167px;
+}
+
+.user-top-five-artist-info{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    align-items: start;
+}
+
+
+.flipArtistDataBtn{
+    height: 3vh;
+    width: 3vh;
+    align-items: end;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.flipArtistDataImg{
+    height: 100%;
+}
+
+
+
+
+.genre-pie-chart-wrapper{
+    background-color: white;
+    color: black;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.genre-pie-chart-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.genre-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.top-five-genre-list{
+    display: flex;
+    flex-direction: row;
+    gap: .3  rem;
+}
+
+.top-five-genre-list h4{
+    align-self: center;    
+}
+
+
+.user-pie-chart-container{
+    flex-grow: 1;
+}
+.user-pie-chart-container img{
+    height: 20vh;
+    width: auto;
+}
+
+
+
+
+.university-pie-chart{
+    text-align: center;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.flipGenreDataBtn{
+    height: 3vh;
+    width: 3vh;
+    align-items: end;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.flipGenreDataImg{
+    height: 100%;
+}
+
+.fade-in {
+    opacity: 0; /* Start invisible */
+    transition: opacity 1s ease-in; /* Transition effect */
+}
+
+.fade-in.visible {
+    opacity: 1; /* Fully visible */
+}
+
+
+
+
+
+/* Header Styles */
+
+header{
+    grid-area: header;
+    display: flex;
+    padding: 0 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    max-height: 90%;
+}
+
+
+
+.nav-toggle{
+    min-width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    height: 20vh;
+    width: 15vh;
+    background-color: white;
+    color: black;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: 5px 10px 10px #888888;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1000; /* Ensures it layers above main content */
+    border-radius: 20px;
+    text-align: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    margin: 1rem 0;
+}
+
+.nav-menu ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+/* Active class to show the menu */
+.nav-menu.active {
+    transform: translateX(0); /* Slide in */
+}
+
+
+
+footer{
+    grid-area: footer;
+}
+
+
+
+
+
+/* About SOC Styles */
+
+.aboutSOC{
+    
+    background-color: white;
+    color: black;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutSOC img{
+    width: 80%;
+    height: auto;
+    place-self: center;
+}
+
+
+/* Meet Me Page styles */
+
+.titleCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+    'name img'
+    'list list';
+    background-color: white;
+    color: black;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 20px;
+    gap: 1rem;
+}
+
+.name-card{
+    grid-area: name;
+}
+
+
+
+
+.image-container{
+    grid-area: img;
+    place-self: center;
+}
+
+.image-container img{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0% 30%;
+}
+
+.links-container{
+    grid-area: list;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.links-container ul{
+    list-style-type: none;
+}
+
+.about-me-container{
+    background-color: white;
+    color: black;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-container h4{
+    text-align: start;
+}
+
+.about-me-imgs{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-me-container img{
+    height: 20vh;
+    border-radius: 20px;
+}
+
+
+
+/* Disclaimer Page Styles */
+
+.disclaimer-container{
+    background-color: white;
+    color: black;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.disclaimer-container h3{
+    text-align: center;
+}
+
