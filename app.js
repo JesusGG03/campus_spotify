@@ -483,7 +483,7 @@ app.get('/get-uni-genres', async (req, res) => {
 
         uniGenres.rows.forEach(genre => {
             const mappedGenre = mapGenre(genre.genre_name);
-
+            const count = parseInt(genre.genre_count, 10);
             genreCounts[mappedGenre] = (genreCounts[mappedGenre] || 0) + genre.genre_count;
         });
 
