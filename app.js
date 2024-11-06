@@ -455,6 +455,8 @@ app.get('/get-uni-tracks', async (req, res) => {
     } catch (error) {
         console.error('Error fetching university tracks: ', error);
         res.status(500).json({ error: 'Failed to fetch university tracks'});
+    }finally {
+        client.release(); // Release client in finally block
     }
 });
 
@@ -469,6 +471,8 @@ app.get('/get-uni-artists', async (req, res) => {
     } catch (error) {
         console.error('Error fetching university artists: ', error);
         res.status(500).json({ error: 'Failed to fetch university artists'});
+    }finally {
+        client.release(); // Release client in finally block
     }
 });
 
@@ -504,6 +508,8 @@ app.get('/get-uni-genres', async (req, res) => {
     } catch (error) {
         console.error('Error fetching uiversity genres: ', error);
         res.status(500).json({ error: 'Failed to fetch university genres'});
+    }finally {
+        client.release(); // Release client in finally block
     }
 });
 
