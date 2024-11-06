@@ -449,7 +449,7 @@ app.get('/get-uni-tracks', async (req, res) => {
     const client = await pool.connect();
 
     try{
-        const uniTracks = await pool.query('SELECT * FROM tracks ORDER BY track_count DESC LIMIT 5');
+        const uniTracks = await client.query('SELECT * FROM tracks ORDER BY track_count DESC LIMIT 5');
         
         res.json(uniTracks.rows);
     } catch (error) {
@@ -465,7 +465,7 @@ app.get('/get-uni-artists', async (req, res) => {
     const client = await pool.connect();
 
     try{
-        const uniArtist = await pool.query('SELECT * FROM artists ORDER BY artist_count DESC LIMIT 5');
+        const uniArtist = await client.query('SELECT * FROM artists ORDER BY artist_count DESC LIMIT 5');
         
         res.json(uniArtist.rows);
     } catch (error) {
@@ -477,10 +477,10 @@ app.get('/get-uni-artists', async (req, res) => {
 });
 
 app.get('/get-uni-genres', async (req, res) => {
-    await pool.connect();
+    const client = await pool.connect();
 
     try{
-        const uniGenres = await pool.query('SELECT * FROM genres');
+        const uniGenres = await client.query('SELECT * FROM genres');
 
         const genreCounts = {};
 
