@@ -9,5 +9,8 @@
     "pg": "^8.13.1",
     "query-string": "^9.1.0",
     "request": "^2.88.2"
+  },
+  "scripts": {
+    "start": "node app.js"
   }
 }
