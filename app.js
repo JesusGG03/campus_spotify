@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
+const pgSession = require('connect-pg-simple')(session);
 const request = require('request');
 const crypto = require('crypto');
 const querystring = require('querystring');
@@ -47,11 +48,9 @@ function mapGenre(genres){
 
 
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL, // Use the Heroku DATABASE_URL
-    ssl: {
-        rejectUnauthorized: false // This is necessary for SSL connections on Heroku
-    }
+    connectionString: process.env.DATABASE_URL
 });
+
 
 
 async function insertTracks(trackName, artistName, imageURL) {
@@ -133,10 +132,18 @@ const app = express()
 
 
 app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: false}
+    store: new pgSession({
+        pool: pool, 
+        tableName: 'session', // Table to store session data
+    }),
+    secret: process.env.SESSION_SECRET, 
+    resave: false, 
+    saveUninitialized: false, 
+    cookie: { 
+        secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
+          httpOnly: true, // Helps mitigate cross-site scripting attacks
+        maxAge: 60 * 60 * 1000 // Cookie expiration in milliseconds (e.g., 1 hour)
+    }
 }));
 
 app.get('/', (req, res) => {
