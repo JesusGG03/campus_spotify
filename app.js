@@ -14,7 +14,7 @@ const { Pool } = require('pg');
 
 var client_id = process.env.CLIENT_ID; // your clientId
 var client_secret = process.env.CLIENT_SECRET; // Your secret
-var redirect_uri = process.env.REDIRECT_URI || 'http://localhost:3000/callback'; // Your redirect uri
+var redirect_uri = process.env.REDIRECT_URI; // Your redirect uri
 
 
 const keywordMappings = {
