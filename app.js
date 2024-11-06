@@ -140,7 +140,7 @@ app.use(session({
     resave: false, 
     saveUninitialized: false, 
     cookie: { 
-        secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
+        secure: process.env.NODE_ENV, // Use secure cookies in production
           httpOnly: true, // Helps mitigate cross-site scripting attacks
         maxAge: 60 * 60 * 1000 // Cookie expiration in milliseconds (e.g., 1 hour)
     }
