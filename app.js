@@ -508,6 +508,8 @@ app.get('/get-uni-genres', async (req, res) => {
     }
 });
 
-console.log('Listening on 3000');
-app.listen(3000);
+const port = process.env.PORT || 3000;  // Use Heroku's dynamic port or fall back to 3000 locally
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
+});
 
