@@ -325,6 +325,7 @@ function getUniGenres() {
     fetch('/get-uni-genres')
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             displayUniGenreChart(data); // Only display after data is fully retrieved
         })
         .catch(error => console.error('Error fetching university genres:', error));
