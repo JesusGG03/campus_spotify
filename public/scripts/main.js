@@ -321,13 +321,13 @@ function getUserGenres(){
 }
 
 
-function getUniGenres(){
+function getUniGenres() {
     fetch('/get-uni-genres')
         .then(response => response.json())
         .then(data => {
-            displayUniGenreChart(data);
+            displayUniGenreChart(data); // Only display after data is fully retrieved
         })
-        .catch(error => console.error('Error fetching university genres: ', error));
+        .catch(error => console.error('Error fetching university genres:', error));
 }
 
 function displayUserGenreChart(genreData) {
@@ -383,19 +383,11 @@ function displayUserGenreChart(genreData) {
 }
 
 
-function displayUniGenreChart(genreData) {
-    const artistTitle = document.querySelector(".university-pie-chart h1");
-    
-    artistTitle.textContent = "Top Genres in Charlotte";
-
+function displayUserGenreChart(genreData) {
     const ctx = document.getElementById('genre-pie-chart').getContext('2d');
 
-    if (genreChart) {
-        genreChart.destroy();
-    }
-    
-    const labels = Object.keys(genreData);
-    const data = Object.values(genreData);
+    const labels = Object.keys(genreData).length ? Object.keys(genreData) : ["Others"];
+    const data = Object.values(genreData).length ? Object.values(genreData) : [1];
 
     genreChart = new Chart(ctx, {
         type: 'pie',
@@ -405,14 +397,11 @@ function displayUniGenreChart(genreData) {
                 label: 'Genre Distribution',
                 data: data,
                 backgroundColor: [
-                    '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40',
                     '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'
                 ]
             }]
         },
-        options: {
-            responsive: true
-        }
+        options: { responsive: true }
     });
 }
 
