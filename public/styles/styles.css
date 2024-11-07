@@ -42,19 +42,23 @@ main{
     display: flex;
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
 }
+
 
 /* Submit Button */
 #login-btn {
     display: block;
     background-color: white ;
     color: black;
-    font-size: 1.25rem; 
+    font-size: 1.5rem; 
     font-weight: bold;
     padding: 0.5em 1em;
     border-radius: 5px;
     margin: 0 auto;
+    border: none;
 }
+
 
 
 
