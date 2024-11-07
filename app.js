@@ -216,7 +216,7 @@ app.get('/callback', function(req, res){
                 req.session.accessToken = access_token;
 
                 var options = {
-                    url: 'https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=30&offset=0',
+                    url: 'https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=25&offset=0',
                     headers: { Authorization: 'Bearer ' + access_token },
                     json: true
                 };
@@ -242,7 +242,7 @@ app.get('/callback', function(req, res){
 
 
                 options = {
-                    url: 'https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=5&offset=0',
+                    url: 'https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=25&offset=0',
                     headers: { Authorization: 'Bearer ' + access_token},
                     json: true
                 };
@@ -264,7 +264,7 @@ app.get('/callback', function(req, res){
                 });
 
                 options = {
-                    url: 'https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=50&offset=0',
+                    url: 'https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=25&offset=0',
                     headers: { Authorization: 'Bearer ' + access_token},
                     json: true
                 };
@@ -324,7 +324,7 @@ app.get('/user-top-tracks', function(req, res) {
     }
 
     const options = {
-        url: 'https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=30&offset=0',
+        url: 'https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=5&offset=0',
         headers: { Authorization: 'Bearer ' + accessToken },
         json: true
     };
@@ -352,7 +352,7 @@ app.get('/user-top-artist', function(req, res){
     }
 
     const options = {
-        url: 'https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=5&offset=0',
+        url: 'https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=5&offset=0',
         headers: { Authorization: 'Bearer ' + access_token},
         json: true
     };
@@ -379,7 +379,7 @@ app.get('/user-genres', function(req, res){
     }
 
     const options = {
-        url: 'https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=50&offset=0',
+        url: 'https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=35&offset=0',
         headers: { Authorization: 'Bearer ' + access_token},
         json: true
     };
