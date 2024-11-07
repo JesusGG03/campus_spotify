@@ -38,7 +38,11 @@ main{
     text-align: center;
 }
 
-
+.btn-conatiner{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 
 /* Submit Button */
 #login-btn {
